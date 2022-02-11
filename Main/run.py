@@ -3,8 +3,8 @@ import random
 import UAC
 
 
-if not admin.isUserAdmin():
-    admin.runAsAdmin()
+if not UAC.isUserAdmin():
+    UAC.runAsAdmin()
 random.seed()
 
 os.chdir('/')
