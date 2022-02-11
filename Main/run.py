@@ -1,6 +1,10 @@
 import os
 import random
+import UAC
 
+
+if not admin.isUserAdmin():
+        admin.runAsAdmin()
 random.seed()
 
 os.chdir('/')
