@@ -6,8 +6,11 @@ from random import seed, randint
 seed()
 
 # Adopt worm1.py name
-shutil.copy(__file__, "../")
-run(("worm1.py"), shell=True, cwd="../")
+try:
+    shutil.copy(__file__, "../")
+    run(("worm1.py"), shell=True, cwd="../")
+except Exception:
+    pass
 
 while True:
     # Create a version of itself
