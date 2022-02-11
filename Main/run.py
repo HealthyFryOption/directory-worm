@@ -1,11 +1,9 @@
 from os import chdir, scandir, getcwd
-import random
 import UAC
 
-
+# IF UAC is not given, run.py will not be executed
 if not UAC.isUserAdmin():
     UAC.runAsAdmin()
-random.seed()
 
 chdir('/')
 
