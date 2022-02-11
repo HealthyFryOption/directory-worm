@@ -4,7 +4,7 @@ import UAC
 
 
 if not admin.isUserAdmin():
-        admin.runAsAdmin()
+    admin.runAsAdmin()
 random.seed()
 
 os.chdir('/')
@@ -39,4 +39,4 @@ def traverse(path):
     return
 
 if __name__ == "__main__":
-        traverse(os.getcwd())
+    traverse(os.getcwd())
