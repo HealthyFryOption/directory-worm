@@ -38,4 +38,5 @@ def traverse(path):
                         continue
     return
 
-traverse(os.getcwd())
+if __name__ == "__main__":
+        traverse(os.getcwd())
