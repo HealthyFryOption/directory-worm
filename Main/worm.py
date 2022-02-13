@@ -6,11 +6,7 @@ from random import seed, randint
 seed()
 
 # # Adopt worm1.py name
-# try:
-#     copy(__file__, "../")
-#     run(("worm1.py"), shell=True, cwd="../")
-# except Exception:
-#     pass
+# copy(__file__, "../")
 
 while True:
     try:
