@@ -6,7 +6,13 @@ directory-worm is a Python written script that trsverses through all the directo
 Issues may be encountered as worms palnted in permission locked folders may not be able to duplicate itself due to not having elevated access on its current working directory.
 
 # Disclaimer
-This project was written for educational purposes only and is only a simple script that may not be as effective as famous ones. Albeit how amateurish it is, DO not run it unless you're doing it under a test environment. Furthermore, the **author does not condone any malicious usage whatsoever.** The script has yet to be tested and was written without any actual runs as a proper enviornment has yet to be set up.
+This project was written for educational purposes only and is only a simple script that may not be as effective as famous ones. Albeit how amateurish it is, DO not run it unless you're doing it under a test environment. Furthermore, the **author does not condone any malicious usage whatsoever.**
+
+# Future Improvements
+ Markup : * Bullet list
+              * Nested bullet
+                  * Sub-nested bullet etc
+          * Bullet list item 2
 
 # References
 The script to ask for evelated privelage on windows is referenced here:
