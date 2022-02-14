@@ -11,9 +11,9 @@ This project was written for educational purposes only and is only a simple scri
 # Future Improvements
 * **Changing permission locked folders to be free to be modified by everyone** so that startup bat file won't need to run UAC request anymore.
 
-* **Improve worm1.py** in speed of replication and increase size of worm1.py as to spread itself out faster and take up storage space of Drive based in faster. Furthermore, to become capable of distributing itself out of one single drive.
+* **Improve worm1.py** in speed of replication and increase size of worm1.py as to spread itself out faster and take up storage space of Drive based in. Furthermore, to become capable of distributing itself out of one single drive.
 
-* **Find balance between CPU usage and speed of replication.** As of now, some worm1.py files are empty as they are either truncated or created but due to the lack of computer resources, the actual operation of writing binary info of worm.py is not performed. Furthermore, even if they are created, cmd.exe and python interpreters can't be invoked.
+* **Find balance between CPU usage and speed of replication.** As of now, some worm1.py files are empty as they are either truncated or created with content empty. This is due to the lack of computer resources when running, causing the actual operation of writing binary info of worm.py not to be performed. Furthermore, even if they are created, cmd.exe and python interpreters sometimes can't be invoked.
 
 
 # References
