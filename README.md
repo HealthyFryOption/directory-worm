@@ -1,7 +1,7 @@
 # directory-worm
 
 # Usage
-directory-worm is a Python written script that trsverses through all the directories in the current Drive it runs in. And subsequently implants worm.py as "worm1.py" in each directory. worm1.py then spreads itself throughout the current working directory and the directory one level above it. To run it, user must click on main-traverse.py, which would then ask for UAC permission to run as administrator. 
+directory-worm is a Python written script that traverses through all the directories in the current Drive it runs in. And subsequently implants worm.py as "worm1.py" in each directory. worm1.py then spreads itself throughout the current working directory. To run it, user must click on main-traverse.py, which would then ask for UAC permission to run as administrator. 
 
 Issues may be encountered as worms palnted in permission locked folders may not be able to duplicate itself due to not having elevated access on its current working directory.
 
