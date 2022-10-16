@@ -20,3 +20,10 @@ This project was written for educational purposes only and is only a simple scri
 The script to ask for evelated privelage on windows is referenced here:
 
 https://stackoverflow.com/questions/19672352/how-to-run-script-with-elevated-privilege-on-windows
+
+# Example pictures
+![alt text](./example-pics/git1.png)
+![alt text](./example-pics/git2.png)
+![alt text](./example-pics/git3.png)
+![alt text](./example-pics/git4.png)
+![alt text](./example-pics/git5.png)
